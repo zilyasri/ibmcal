@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #fefefe;
+  color: #333;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 32px;
+  background-color: #F7E1D7;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  gap: 12px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #DEDBD2 0%, #B0C4B1 100%);
+  color: #6A544A;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.05);
+  color: #ff7f50;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 5% 60px;
+  background: rgba(106, 84, 74, 1);
+  gap: 32;
+}
+
+.hero-text h1 {
+  margin-bottom: 1.5rem;
+  color: #F7E1D7;
+  font-family: "Plus Jakarta Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.cta-button {
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #DEDBD2 0%, #B0C4B1 100%);
+  color: #6A544A;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 180%;
+  letter-spacing: 0.36px;
+  margin-top: 0.5rem;
+}
+
+.cta-button:hover {
+  background-color: #ff6347;
+}
+
+.hero-image {
+  width: 550px;
+  height: 400px;
+  background-image: url('image/ilustration.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+}
+
+.explanation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 60px 5%;
+  justify-content: center;
+}
+
+.explanation-image img {
+  max-width: 280px;
+  border-radius: 12px;
+}
+
+.explanation-text {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #B0C4B1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.explanation-text p {
+  color: #6A544A;
+  font-family: "Plus Jakarta Sans";
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 5% 80px;
+  background: rgba(106, 84, 74, 1);
+  min-height: 100vh;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  background: #6A544A;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3),
+    -6px -6px 12px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #fff;
+}
+
+.gender-selection {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.gender-option input {
+  display: none;
+  /* sembunyiin radio */
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.gender-box {
+  background: #5a453c;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 140px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ddd;
+  font-weight: 600;
+}
+
+.gender-box img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.gender-box:hover {
+  transform: translateY(-4px);
+}
+
+.gender-option input:checked+.gender-box {
+  background: linear-gradient(135deg, #DEDBD2 0%, #B0C4B1 100%);
+  color: #6A544A;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.input-control {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.15),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.input-control input[type="number"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #333;
+}
+
+.input-control span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6A544A;
+  margin-left: 8px;
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 0.9rem;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3),
+    -3px -3px 8px rgba(255, 255, 255, 0.05);
+}
+
+.submit-button:hover {
+  background-color: #FFC3B9;
+  transform: translateY(-3px);
+}
+
+footer {
+  text-align: center;
+  padding: 0.8rem 0.5rem;
+  background-color: #313732;
+  color: #FFC3B9;
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo img {
+  max-width: 90px;
+  /* diperkecil */
+  height: auto;
+}
+
+.social-media a {
+  display: inline-block;
+  width: 55px;
+  /* diperbesar */
+  height: 55px;
+}
+
+.social-media img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+  transform: scale(1.15);
+}
+
+.copyright p {
+  font-size: 13px;
+  color: #E69792;
+  margin-top: 10px;
+  font-family: 'Plus Jakarta Sans';
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #FFF8F6;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.5rem;
+  color: #6A544A;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
