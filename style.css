@@ -101,6 +101,7 @@ nav a:hover {
   gap: 2rem;
   padding: 60px 5%;
   justify-content: center;
+  background:#F7E1D7;
 }
 
 .explanation-image img {
@@ -136,7 +137,7 @@ nav a:hover {
 form {
   width: 100%;
   max-width: 500px;
-  background: #6A544A;
+  background: #F7E1D7;
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3),
@@ -155,7 +156,6 @@ form {
 
 .gender-option input {
   display: none;
-  /* sembunyiin radio */
   flex-direction: column;
   align-items: center;
   margin: 10px;
@@ -229,7 +229,6 @@ form {
   margin-left: 8px;
 }
 
-/* Submit Button */
 .submit-button {
   padding: 0.9rem;
   background-color: #ff7f50;
@@ -265,14 +264,12 @@ footer {
 
 .logo img {
   max-width: 90px;
-  /* diperkecil */
   height: auto;
 }
 
 .social-media a {
   display: inline-block;
   width: 55px;
-  /* diperbesar */
   height: 55px;
 }
 
@@ -299,46 +296,73 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.45); 
+  backdrop-filter: blur(6px); 
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
-.hidden {
-  display: none;
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal-content {
-  background: #FFF8F6;
-  padding: 2rem 1.5rem;
-  border-radius: 16px;
+  background: #F7E1D7;
+  padding: 2rem 1.8rem;
+  border-radius: 20px;
   max-width: 420px;
   width: 90%;
   text-align: center;
   position: relative;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transform: translateY(40px) scale(0.95);
+  opacity: 0;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+#result-container p {
+  margin: 0.6rem 0;
+  font-size: 0.95rem;
+  color: #444;
 }
 
 .close-btn {
   position: absolute;
   top: 12px;
   right: 16px;
-  font-size: 1.5rem;
-  color: #6A544A;
+  font-size: 1.6rem;
+  color: #6a544a;
   background: none;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .close-btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) rotate(10deg);
+  color: #e63946; 
 }
+
 
 @keyframes fadeIn {
   from {
