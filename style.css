@@ -148,7 +148,7 @@ form {
   color: #fff;
 }
 
-.gender-selection {
+/* .gender-selection {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
@@ -188,7 +188,7 @@ form {
   color: #6A544A;
   font-weight: 700;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+} */
 
 
 .input-group {
